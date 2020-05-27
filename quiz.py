@@ -9,10 +9,8 @@ df = pd.read_csv("problems.csv", names=['Question','Answer'])
 df['Answer'].to_dict
 
 for i in range(len(df)):
-    print('The '+ str() +'th question is')
-    print(df['Question'][i])
+    print('Question number '+ str(i+1)+' is '+str(df['Question'][i]))
     ans = int(input( "Enter the answer"))
-    print(type(ans))
     if ans == df['Answer'][i]:
         print('Correct')
     else:
